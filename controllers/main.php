@@ -55,7 +55,7 @@
             
             $sPublicUrl = $this->generatePublicUrl($sPath);
             $oBody = $oResponse->getBody();
-            $oBody->write('Download URL : ' . $sPath . PHP_EOL . $sPublicUrl . PHP_EOL);
+            $oBody->write('Download URL : ' . $sPublicUrl . PHP_EOL);
             return $oResponse->withHeader('Content-type', 'text/plain');
         }
         
