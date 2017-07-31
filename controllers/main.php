@@ -14,12 +14,7 @@
         }
         
         public function home(Request $oRequest, Response $oResponse, $arArgs) {
-            // your code
-            // to access items in the container... $this->oContainer->get('');
-            
-            $oBody = $oResponse->getBody();
-            $oBody->write('Hello');
-            return $oResponse->withHeader('Content-type', 'text/plain');
+            return $this->oContainer->view->render($oResponse, 'index');
         }
 
         private function generateRandom(int $iLen) {
